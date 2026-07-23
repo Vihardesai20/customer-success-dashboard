@@ -8,9 +8,19 @@ interface AppShellProps {
   title: string;
   subtitle?: string;
   children: React.ReactNode;
+  dataSource?: "mock" | "imported";
+  onImportClick?: () => void;
+  onResetClick?: () => void;
 }
 
-export function AppShell({ title, subtitle, children }: AppShellProps) {
+export function AppShell({
+  title,
+  subtitle,
+  children,
+  dataSource,
+  onImportClick,
+  onResetClick,
+}: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const closeSidebar = useCallback(() => {
@@ -36,6 +46,9 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
           subtitle={subtitle}
           menuOpen={sidebarOpen}
           onMenuClick={toggleSidebar}
+          dataSource={dataSource}
+          onImportClick={onImportClick}
+          onResetClick={onResetClick}
         />
         <main
           id="main-content"

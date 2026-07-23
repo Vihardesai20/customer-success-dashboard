@@ -1,0 +1,5 @@
+id,name,industry,csm,arr,healthScore,healthStatus,adoptionPercent,renewalDate,openTickets,expansionOpportunity
+cus_demo_01,Acme Analytics,SaaS,Ava Chen,420000,86,healthy,82,2026-08-14,2,medium
+cus_demo_02,Bright Clinic,Healthcare,Jordan Lee,310000,62,at_risk,54,2026-07-28,7,low
+cus_demo_03,Harbor Freight Co,Logistics,Sam Ortiz,275000,48,critical,39,2026-08-02,11,none
+cus_demo_04,Lumen Stores,Retail,Ava Chen,540000,91,healthy,88,2026-11-19,1,high

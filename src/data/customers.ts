@@ -10,6 +10,28 @@ export const customers: Customer[] = [
     renewalDate: "2026-08-14",
     csmOwner: "Ava Chen",
     status: "healthy",
+    adoptionPercent: 82,
+    openTickets: 2,
+    expansionOpportunity: "medium",
+    keyRisks: [
+      "Executive sponsor changing roles next quarter",
+      "Secondary workspace still on legacy onboarding flow",
+    ],
+    recentActivities: [
+      { date: "2026-07-18", summary: "Quarterly business review completed with product and CS" },
+      { date: "2026-07-10", summary: "Enabled advanced reporting for two new teams" },
+      { date: "2026-06-28", summary: "Closed low-priority billing clarification ticket" },
+    ],
+    successGoals: [
+      "Reach 90% weekly active admin adoption",
+      "Roll out insights dashboards to all regional managers",
+      "Confirm multi-year renewal proposal by early August",
+    ],
+    nextActions: [
+      "Schedule stakeholder intro with incoming VP Operations",
+      "Share playbook for migrating remaining legacy workspaces",
+      "Draft expansion quote for analytics add-on",
+    ],
   },
   {
     id: "cus_02",
@@ -20,6 +42,29 @@ export const customers: Customer[] = [
     renewalDate: "2026-07-28",
     csmOwner: "Jordan Lee",
     status: "at_risk",
+    adoptionPercent: 54,
+    openTickets: 7,
+    expansionOpportunity: "low",
+    keyRisks: [
+      "Renewal in under 30 days with unresolved support backlog",
+      "Clinical ops team reports incomplete training coverage",
+      "Security questionnaire still outstanding",
+    ],
+    recentActivities: [
+      { date: "2026-07-20", summary: "Escalated three P2 tickets to product support" },
+      { date: "2026-07-14", summary: "Held risk review with CSM and customer IT lead" },
+      { date: "2026-07-02", summary: "Sent renewal timeline and success plan draft" },
+    ],
+    successGoals: [
+      "Reduce open tickets below 3 before renewal",
+      "Complete clinician onboarding for remaining sites",
+      "Secure verbal renewal commitment this week",
+    ],
+    nextActions: [
+      "Run daily ticket stand-up until backlog clears",
+      "Book executive check-in with BrightPath COO",
+      "Deliver security questionnaire package by Friday",
+    ],
   },
   {
     id: "cus_03",
@@ -30,6 +75,29 @@ export const customers: Customer[] = [
     renewalDate: "2026-08-02",
     csmOwner: "Sam Ortiz",
     status: "critical",
+    adoptionPercent: 39,
+    openTickets: 11,
+    expansionOpportunity: "none",
+    keyRisks: [
+      "Critical integration failures impacting dispatch workflows",
+      "Champion left the company last month",
+      "Adoption below 40% across warehouse supervisors",
+    ],
+    recentActivities: [
+      { date: "2026-07-21", summary: "Opened critical incident for API sync delays" },
+      { date: "2026-07-16", summary: "Emergency working session with ops leadership" },
+      { date: "2026-07-08", summary: "Paused expansion discussion until stability improves" },
+    ],
+    successGoals: [
+      "Restore integration SLA to 99.5%",
+      "Identify and ramp a new internal champion",
+      "Stabilize renewal posture before August 2",
+    ],
+    nextActions: [
+      "Assign dedicated support engineer for 2-week bridge",
+      "Map new champion candidates with Harbor HRBP",
+      "Present recovery plan and credit options",
+    ],
   },
   {
     id: "cus_04",
@@ -40,6 +108,27 @@ export const customers: Customer[] = [
     renewalDate: "2026-11-19",
     csmOwner: "Ava Chen",
     status: "healthy",
+    adoptionPercent: 88,
+    openTickets: 1,
+    expansionOpportunity: "high",
+    keyRisks: [
+      "Holiday peak season may increase support volume",
+    ],
+    recentActivities: [
+      { date: "2026-07-15", summary: "Expansion workshop for store-ops analytics package" },
+      { date: "2026-07-01", summary: "Customer referenced Continuum in internal town hall" },
+      { date: "2026-06-20", summary: "Closed single UI polish ticket" },
+    ],
+    successGoals: [
+      "Launch store-ops module in 120 locations",
+      "Maintain health score above 88 through holiday season",
+      "Close expansion opportunity before Q4 planning freeze",
+    ],
+    nextActions: [
+      "Send ROI brief for store-ops expansion",
+      "Align implementation timeline with retail calendar",
+      "Invite Lumen to customer advisory board",
+    ],
   },
   {
     id: "cus_05",
@@ -50,6 +139,28 @@ export const customers: Customer[] = [
     renewalDate: "2026-09-05",
     csmOwner: "Priya Nair",
     status: "healthy",
+    adoptionPercent: 71,
+    openTickets: 3,
+    expansionOpportunity: "high",
+    keyRisks: [
+      "Compliance review may delay advanced feature rollout",
+      "Power-user cohort concentrated in one business unit",
+    ],
+    recentActivities: [
+      { date: "2026-07-19", summary: "Demoed treasury insights module to finance leads" },
+      { date: "2026-07-07", summary: "Resolved SSO claim mapping issue" },
+      { date: "2026-06-25", summary: "Agreed on mutual success plan for FY26" },
+    ],
+    successGoals: [
+      "Expand usage into risk and compliance teams",
+      "Complete SOC2 evidence package collaboration",
+      "Land enterprise expansion for insights module",
+    ],
+    nextActions: [
+      "Share compliance evidence checklist",
+      "Pilot insights module with risk team",
+      "Prepare commercial proposal for September renewal",
+    ],
   },
   {
     id: "cus_06",
@@ -60,6 +171,28 @@ export const customers: Customer[] = [
     renewalDate: "2026-07-30",
     csmOwner: "Jordan Lee",
     status: "at_risk",
+    adoptionPercent: 47,
+    openTickets: 5,
+    expansionOpportunity: "low",
+    keyRisks: [
+      "Summer staffing gaps slowing onboarding",
+      "Budget scrutiny tied to upcoming board meeting",
+    ],
+    recentActivities: [
+      { date: "2026-07-17", summary: "Training attendance dropped for instructor cohort" },
+      { date: "2026-07-09", summary: "Shared value recap ahead of renewal conversation" },
+      { date: "2026-06-30", summary: "Closed two content-import tickets" },
+    ],
+    successGoals: [
+      "Recover instructor activation above 65%",
+      "Document outcomes for board renewal packet",
+      "Keep renewal decision on schedule",
+    ],
+    nextActions: [
+      "Run make-up onboarding sessions for instructors",
+      "Provide outcome metrics one-pager for board",
+      "Confirm decision-maker availability this week",
+    ],
   },
   {
     id: "cus_07",
@@ -70,6 +203,29 @@ export const customers: Customer[] = [
     renewalDate: "2026-08-21",
     csmOwner: "Sam Ortiz",
     status: "critical",
+    adoptionPercent: 33,
+    openTickets: 14,
+    expansionOpportunity: "none",
+    keyRisks: [
+      "Plant managers not logging into weekly workflows",
+      "High ticket volume around mobile offline sync",
+      "Procurement evaluating competitive alternative",
+    ],
+    recentActivities: [
+      { date: "2026-07-22", summary: "Competitive displacement rumor raised by AE" },
+      { date: "2026-07-13", summary: "Onsite discovery with two underperforming plants" },
+      { date: "2026-07-05", summary: "Priority bug filed for offline sync retries" },
+    ],
+    successGoals: [
+      "Stabilize mobile sync for floor supervisors",
+      "Increase plant adoption to 55% before renewal",
+      "Re-establish executive alignment with COO",
+    ],
+    nextActions: [
+      "Ship hot-fix ETA and workaround guide",
+      "Host plant champion bootcamp",
+      "Prepare save plan with commercial flexibility",
+    ],
   },
   {
     id: "cus_08",
@@ -80,6 +236,27 @@ export const customers: Customer[] = [
     renewalDate: "2026-10-12",
     csmOwner: "Priya Nair",
     status: "healthy",
+    adoptionPercent: 79,
+    openTickets: 0,
+    expansionOpportunity: "medium",
+    keyRisks: [
+      "Campaign calendar may reduce engagement in August",
+    ],
+    recentActivities: [
+      { date: "2026-07-12", summary: "Customer story interview completed" },
+      { date: "2026-07-03", summary: "Enabled collaborative briefs workflow" },
+      { date: "2026-06-18", summary: "Zero open tickets for three consecutive weeks" },
+    ],
+    successGoals: [
+      "Publish joint case study",
+      "Expand workflow to affiliate brands",
+      "Maintain zero critical tickets through Q3",
+    ],
+    nextActions: [
+      "Approve case study draft",
+      "Introduce affiliate brand stakeholders",
+      "Offer office hours for campaign season",
+    ],
   },
   {
     id: "cus_09",
@@ -90,6 +267,28 @@ export const customers: Customer[] = [
     renewalDate: "2026-08-08",
     csmOwner: "Ava Chen",
     status: "at_risk",
+    adoptionPercent: 58,
+    openTickets: 6,
+    expansionOpportunity: "medium",
+    keyRisks: [
+      "Claims team adoption lagging underwriters",
+      "Renewal committee wants clearer ROI narrative",
+    ],
+    recentActivities: [
+      { date: "2026-07-18", summary: "ROI workshop with finance and underwriting" },
+      { date: "2026-07-06", summary: "Opened tickets around claims export latency" },
+      { date: "2026-06-27", summary: "Introduced new claims ops lead to CSM" },
+    ],
+    successGoals: [
+      "Bring claims adoption in line with underwriting",
+      "Deliver quantified ROI pack for renewal committee",
+      "Close export latency tickets before August 8",
+    ],
+    nextActions: [
+      "Prioritize export latency fixes with engineering",
+      "Run claims team enablement sprint",
+      "Send renewal committee briefing deck",
+    ],
   },
   {
     id: "cus_10",
@@ -100,6 +299,27 @@ export const customers: Customer[] = [
     renewalDate: "2026-12-01",
     csmOwner: "Jordan Lee",
     status: "healthy",
+    adoptionPercent: 76,
+    openTickets: 2,
+    expansionOpportunity: "high",
+    keyRisks: [
+      "Field team bandwidth limited during wind season",
+    ],
+    recentActivities: [
+      { date: "2026-07-11", summary: "Discussed predictive maintenance expansion" },
+      { date: "2026-06-29", summary: "Closed sensor ingestion ticket" },
+      { date: "2026-06-15", summary: "Shared Q2 outcomes dashboard" },
+    ],
+    successGoals: [
+      "Pilot predictive maintenance with two wind sites",
+      "Keep health score above 75 through season",
+      "Convert expansion pilot into paid module",
+    ],
+    nextActions: [
+      "Confirm pilot sites and success metrics",
+      "Coordinate with solutions engineering",
+      "Draft expansion commercial outline",
+    ],
   },
   {
     id: "cus_11",
@@ -110,6 +330,28 @@ export const customers: Customer[] = [
     renewalDate: "2026-09-18",
     csmOwner: "Sam Ortiz",
     status: "at_risk",
+    adoptionPercent: 51,
+    openTickets: 8,
+    expansionOpportunity: "low",
+    keyRisks: [
+      "Hardware firmware updates breaking webhook events",
+      "CS handoff incomplete after AE transition",
+    ],
+    recentActivities: [
+      { date: "2026-07-20", summary: "Webhook regression reproduced in staging" },
+      { date: "2026-07-08", summary: "New AE introduced; success plan rewrite started" },
+      { date: "2026-06-22", summary: "Customer paused second site rollout" },
+    ],
+    successGoals: [
+      "Stabilize webhook reliability",
+      "Resume second site rollout",
+      "Rebuild trust with ops leadership",
+    ],
+    nextActions: [
+      "Provide webhook incident RCA and fix ETA",
+      "Re-baseline success plan with new AE",
+      "Offer guided relaunch for site two",
+    ],
   },
   {
     id: "cus_12",
@@ -120,5 +362,30 @@ export const customers: Customer[] = [
     renewalDate: "2026-10-30",
     csmOwner: "Priya Nair",
     status: "healthy",
+    adoptionPercent: 84,
+    openTickets: 1,
+    expansionOpportunity: "medium",
+    keyRisks: [
+      "Seasonal promotions team still onboarding",
+    ],
+    recentActivities: [
+      { date: "2026-07-14", summary: "Retail partner portal workshop completed" },
+      { date: "2026-07-01", summary: "Single low-priority labeling ticket opened" },
+      { date: "2026-06-19", summary: "Customer NPS follow-up scored promoters" },
+    ],
+    successGoals: [
+      "Onboard promotions team before fall campaign",
+      "Maintain high adoption through seasonal surge",
+      "Evaluate retail partner portal add-on",
+    ],
+    nextActions: [
+      "Schedule promotions team training",
+      "Monitor ticket for labeling edge case",
+      "Share partner portal packaging options",
+    ],
   },
 ];
+
+export function getCustomerById(id: string): Customer | undefined {
+  return customers.find((customer) => customer.id === id);
+}
