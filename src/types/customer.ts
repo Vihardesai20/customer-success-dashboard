@@ -2,6 +2,11 @@ export type HealthStatus = "healthy" | "at_risk" | "critical";
 
 export type ExpansionOpportunity = "high" | "medium" | "low" | "none";
 
+export interface CustomerActivity {
+  date: string;
+  summary: string;
+}
+
 export interface Customer {
   id: string;
   name: string;
@@ -14,4 +19,8 @@ export interface Customer {
   adoptionPercent: number;
   openTickets: number;
   expansionOpportunity: ExpansionOpportunity;
+  keyRisks: string[];
+  recentActivities: CustomerActivity[];
+  successGoals: string[];
+  nextActions: string[];
 }

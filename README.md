@@ -25,6 +25,13 @@ Modern SaaS dashboard for Customer Success teams — portfolio ARR, risk, renewa
 - Upcoming renewals by month (next 6 months)
 - ARR by industry (highest to lowest)
 
+## Phase 4
+
+- Clickable customer names in the portfolio table
+- Dynamic customer detail route at `/customers/[id]`
+- Customer overview + account insights
+- Helpful not-found state for invalid IDs
+
 ## Stack
 
 - Next.js (App Router)
@@ -40,6 +47,8 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+Example detail page: [http://localhost:3000/customers/cus_01](http://localhost:3000/customers/cus_01).
 
 ## Scripts
 
