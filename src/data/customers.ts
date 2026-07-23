@@ -10,6 +10,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-08-14",
     csmOwner: "Ava Chen",
     status: "healthy",
+    adoptionPercent: 82,
+    openTickets: 2,
+    expansionOpportunity: "medium",
   },
   {
     id: "cus_02",
@@ -20,6 +23,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-07-28",
     csmOwner: "Jordan Lee",
     status: "at_risk",
+    adoptionPercent: 54,
+    openTickets: 7,
+    expansionOpportunity: "low",
   },
   {
     id: "cus_03",
@@ -30,6 +36,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-08-02",
     csmOwner: "Sam Ortiz",
     status: "critical",
+    adoptionPercent: 39,
+    openTickets: 11,
+    expansionOpportunity: "none",
   },
   {
     id: "cus_04",
@@ -40,6 +49,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-11-19",
     csmOwner: "Ava Chen",
     status: "healthy",
+    adoptionPercent: 88,
+    openTickets: 1,
+    expansionOpportunity: "high",
   },
   {
     id: "cus_05",
@@ -50,6 +62,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-09-05",
     csmOwner: "Priya Nair",
     status: "healthy",
+    adoptionPercent: 71,
+    openTickets: 3,
+    expansionOpportunity: "high",
   },
   {
     id: "cus_06",
@@ -60,6 +75,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-07-30",
     csmOwner: "Jordan Lee",
     status: "at_risk",
+    adoptionPercent: 47,
+    openTickets: 5,
+    expansionOpportunity: "low",
   },
   {
     id: "cus_07",
@@ -70,6 +88,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-08-21",
     csmOwner: "Sam Ortiz",
     status: "critical",
+    adoptionPercent: 33,
+    openTickets: 14,
+    expansionOpportunity: "none",
   },
   {
     id: "cus_08",
@@ -80,6 +101,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-10-12",
     csmOwner: "Priya Nair",
     status: "healthy",
+    adoptionPercent: 79,
+    openTickets: 0,
+    expansionOpportunity: "medium",
   },
   {
     id: "cus_09",
@@ -90,6 +114,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-08-08",
     csmOwner: "Ava Chen",
     status: "at_risk",
+    adoptionPercent: 58,
+    openTickets: 6,
+    expansionOpportunity: "medium",
   },
   {
     id: "cus_10",
@@ -100,6 +127,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-12-01",
     csmOwner: "Jordan Lee",
     status: "healthy",
+    adoptionPercent: 76,
+    openTickets: 2,
+    expansionOpportunity: "high",
   },
   {
     id: "cus_11",
@@ -110,6 +140,9 @@ export const customers: Customer[] = [
     renewalDate: "2026-09-18",
     csmOwner: "Sam Ortiz",
     status: "at_risk",
+    adoptionPercent: 51,
+    openTickets: 8,
+    expansionOpportunity: "low",
   },
   {
     id: "cus_12",
@@ -120,5 +153,8 @@ export const customers: Customer[] = [
     renewalDate: "2026-10-30",
     csmOwner: "Priya Nair",
     status: "healthy",
+    adoptionPercent: 84,
+    openTickets: 1,
+    expansionOpportunity: "medium",
   },
 ];
