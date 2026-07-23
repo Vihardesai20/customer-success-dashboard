@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const navItems = [
   { href: "/", label: "Overview", icon: OverviewIcon },
@@ -19,6 +20,44 @@ interface SidebarProps {
 export function Sidebar({ open, onClose }: SidebarProps) {
   const pathname = usePathname();
 
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open, onClose]);
+
+  useEffect(() => {
+    const media = window.matchMedia("(min-width: 1024px)");
+
+    const syncForViewport = () => {
+      if (media.matches) {
+        onClose();
+      }
+    };
+
+    syncForViewport();
+    media.addEventListener("change", syncForViewport);
+    return () => media.removeEventListener("change", syncForViewport);
+  }, [onClose]);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
+
   return (
     <>
       <div
@@ -26,34 +65,52 @@ export function Sidebar({ open, onClose }: SidebarProps) {
           open ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={onClose}
-        aria-hidden={!open}
+        aria-hidden="true"
       />
 
       <aside
+        id="app-sidebar"
         className={`fixed inset-y-0 left-0 z-50 flex w-[260px] flex-col border-r border-[var(--border)] bg-[var(--surface)] transition-transform duration-300 ease-out lg:static lg:translate-x-0 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
+        aria-label="Primary"
+        {...(open
+          ? {
+              role: "dialog",
+              "aria-modal": true,
+            }
+          : {})}
       >
-        <div className="flex h-16 items-center gap-3 border-b border-[var(--border)] px-5">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--accent)] text-white shadow-[0_1px_0_rgba(255,255,255,0.2)_inset]">
-            <BrandMark />
+        <div className="flex h-16 items-center justify-between gap-3 border-b border-[var(--border)] px-5">
+          <div className="flex min-w-0 items-center gap-3">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--accent)] text-white shadow-[0_1px_0_rgba(255,255,255,0.2)_inset]">
+              <BrandMark />
+            </div>
+            <div className="min-w-0">
+              <p className="truncate font-[family-name:var(--font-display)] text-[15px] font-semibold tracking-tight text-[var(--text)]">
+                Continuum
+              </p>
+              <p className="truncate text-xs text-[var(--muted)]">Customer Success</p>
+            </div>
           </div>
-          <div className="min-w-0">
-            <p className="truncate font-[family-name:var(--font-display)] text-[15px] font-semibold tracking-tight text-[var(--text)]">
-              Continuum
-            </p>
-            <p className="truncate text-xs text-[var(--muted)]">Customer Success</p>
-          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface-muted)] hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] lg:hidden"
+            aria-label="Close navigation"
+          >
+            <CloseIcon />
+          </button>
         </div>
 
-        <nav className="flex-1 space-y-1 px-3 py-4">
+        <nav className="flex-1 space-y-1 px-3 py-4" aria-label="Workspace">
           <p className="mb-2 px-3 text-[11px] font-medium uppercase tracking-[0.08em] text-[var(--muted)]">
             Workspace
           </p>
           {navItems.map((item) => {
             const active = pathname === item.href;
             const Icon = item.icon;
-            const className = `group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors duration-150 ${
+            const className = `group flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] ${
               active
                 ? "bg-[var(--accent-soft)] font-medium text-[var(--accent-strong)]"
                 : "text-[var(--text-secondary)] hover:bg-[var(--surface-muted)] hover:text-[var(--text)]"
@@ -77,6 +134,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
                 href={item.href}
                 className={className}
                 onClick={onClose}
+                aria-current={active ? "page" : undefined}
               >
                 <Icon active={active} />
                 <span className="flex-1 text-left">{item.label}</span>
@@ -107,6 +165,15 @@ function BrandMark() {
         strokeWidth="1.8"
         strokeLinecap="round"
       />
+    </svg>
+  );
+}
+
+function CloseIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+      <path d="M4 4L12 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M12 4L4 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   );
 }

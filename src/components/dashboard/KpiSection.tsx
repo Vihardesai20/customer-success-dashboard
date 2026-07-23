@@ -32,8 +32,6 @@ export function KpiSection({ metrics }: KpiSectionProps) {
           value={formatCompactCurrency(metrics.totalArr)}
           detail={formatCurrency(metrics.totalArr)}
           accent="default"
-          trend="up"
-          trendLabel="+4.2%"
           icon={<ArrIcon />}
         />
         <KpiCard
@@ -42,8 +40,6 @@ export function KpiSection({ metrics }: KpiSectionProps) {
           value={formatCompactCurrency(metrics.arrAtRisk)}
           detail={`${Math.round((metrics.arrAtRisk / Math.max(metrics.totalArr, 1)) * 100)}% of portfolio`}
           accent="danger"
-          trend="down"
-          trendLabel="Needs attention"
           icon={<RiskIcon />}
         />
         <KpiCard
@@ -52,8 +48,6 @@ export function KpiSection({ metrics }: KpiSectionProps) {
           value={formatNumber(metrics.upcomingRenewals)}
           detail="Next 60 days"
           accent="warning"
-          trend="neutral"
-          trendLabel="Window"
           icon={<RenewalIcon />}
         />
         <KpiCard
@@ -62,8 +56,6 @@ export function KpiSection({ metrics }: KpiSectionProps) {
           value={formatScore(metrics.averageHealthScore)}
           detail="Out of 100"
           accent="success"
-          trend="up"
-          trendLabel="Stable"
           icon={<HealthIcon />}
         />
       </div>

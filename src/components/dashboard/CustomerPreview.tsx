@@ -42,12 +42,24 @@ export function CustomerPreview({ customers }: CustomerPreviewProps) {
         <table className="min-w-full text-left text-sm">
           <thead className="bg-[var(--surface-muted)] text-xs uppercase tracking-[0.06em] text-[var(--muted)]">
             <tr>
-              <th className="px-5 py-3 font-medium">Customer</th>
-              <th className="px-5 py-3 font-medium">ARR</th>
-              <th className="px-5 py-3 font-medium">Health</th>
-              <th className="px-5 py-3 font-medium">Renewal</th>
-              <th className="px-5 py-3 font-medium">CSM</th>
-              <th className="px-5 py-3 font-medium">Status</th>
+              <th scope="col" className="px-5 py-3 font-medium">
+                Customer
+              </th>
+              <th scope="col" className="px-5 py-3 font-medium">
+                ARR
+              </th>
+              <th scope="col" className="px-5 py-3 font-medium">
+                Health
+              </th>
+              <th scope="col" className="px-5 py-3 font-medium">
+                Renewal
+              </th>
+              <th scope="col" className="px-5 py-3 font-medium">
+                CSM
+              </th>
+              <th scope="col" className="px-5 py-3 font-medium">
+                Status
+              </th>
             </tr>
           </thead>
           <tbody>
