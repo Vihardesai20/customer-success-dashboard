@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Header } from "@/components/layout/Header";
 import { Sidebar } from "@/components/layout/Sidebar";
 
@@ -13,6 +13,14 @@ interface AppShellProps {
 export function AppShell({ title, subtitle, children }: AppShellProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const closeSidebar = useCallback(() => {
+    setSidebarOpen(false);
+  }, []);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen((current) => !current);
+  }, []);
+
   return (
     <div className="flex min-h-screen bg-[var(--bg)] text-[var(--text)]">
       <a
@@ -21,13 +29,13 @@ export function AppShell({ title, subtitle, children }: AppShellProps) {
       >
         Skip to main content
       </a>
-      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <Sidebar open={sidebarOpen} onClose={closeSidebar} />
       <div className="flex min-w-0 flex-1 flex-col">
         <Header
           title={title}
           subtitle={subtitle}
           menuOpen={sidebarOpen}
-          onMenuClick={() => setSidebarOpen((current) => !current)}
+          onMenuClick={toggleSidebar}
         />
         <main
           id="main-content"
