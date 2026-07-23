@@ -27,6 +27,7 @@ import type { Customer, HealthStatus } from "@/types/customer";
 
 interface CustomerPortfolioTableProps {
   customers: Customer[];
+  onImportClick?: () => void;
 }
 
 const selectClassName =
@@ -34,6 +35,7 @@ const selectClassName =
 
 export function CustomerPortfolioTable({
   customers,
+  onImportClick,
 }: CustomerPortfolioTableProps) {
   const searchId = useId();
   const healthId = useId();
@@ -96,7 +98,7 @@ export function CustomerPortfolioTable({
       className="mt-8 overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] shadow-[var(--shadow-sm)]"
     >
       <div className="border-b border-[var(--border)] px-5 py-4">
-        <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <h2 className="font-[family-name:var(--font-display)] text-base font-semibold tracking-tight text-[var(--text)]">
               Customer portfolio
@@ -105,14 +107,25 @@ export function CustomerPortfolioTable({
               Search, filter, and sort accounts across your book of business
             </p>
           </div>
-          <p
-            id={resultsId}
-            className="text-sm font-medium text-[var(--text-secondary)]"
-            aria-live="polite"
-          >
-            Showing {formatNumber(visibleCustomers.length)} of{" "}
-            {formatNumber(customers.length)} customers
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p
+              id={resultsId}
+              className="text-sm font-medium text-[var(--text-secondary)]"
+              aria-live="polite"
+            >
+              Showing {formatNumber(visibleCustomers.length)} of{" "}
+              {formatNumber(customers.length)} customers
+            </p>
+            {onImportClick ? (
+              <button
+                type="button"
+                onClick={onImportClick}
+                className="inline-flex h-9 items-center rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3 text-sm font-medium text-[var(--text-secondary)] transition-colors hover:bg-[var(--surface-muted)] hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+              >
+                Import customers
+              </button>
+            ) : null}
+          </div>
         </div>
 
         <div className="mt-4 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
