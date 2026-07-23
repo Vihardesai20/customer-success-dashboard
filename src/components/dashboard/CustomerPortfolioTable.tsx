@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useDeferredValue, useId, useMemo, useState } from "react";
 import { ExpansionBadge, HealthStatusBadge } from "@/components/dashboard/StatusBadges";
 import {
@@ -299,9 +300,12 @@ export function CustomerPortfolioTable({
                   className="border-t border-[var(--border)] transition-colors hover:bg-[var(--surface-muted)]/70"
                 >
                   <td className="px-5 py-3.5">
-                    <div className="font-medium text-[var(--text)]">
+                    <Link
+                      href={`/customers/${customer.id}`}
+                      className="font-medium text-[var(--accent-strong)] underline-offset-2 transition-colors hover:text-[var(--accent)] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+                    >
                       {customer.name}
-                    </div>
+                    </Link>
                   </td>
                   <td className="px-5 py-3.5 text-[var(--text-secondary)]">
                     {customer.industry}
