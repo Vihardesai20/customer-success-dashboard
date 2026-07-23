@@ -7,7 +7,15 @@ Modern SaaS dashboard for Customer Success teams — portfolio ARR, risk, renewa
 - App shell with left sidebar + top header
 - Four KPI cards derived from mock customer data
 - Responsive layout (desktop + mobile)
-- Clean reusable components (no charts, search, filters, or CSV upload yet)
+- Clean reusable components
+
+## Phase 2
+
+- Full customer portfolio table
+- Search by customer name
+- Filters: health status, industry, renewal window (30/60/90 days)
+- Sort by ARR, health score, and renewal date
+- Clear filters, result count, and empty state
 
 ## Stack
 
