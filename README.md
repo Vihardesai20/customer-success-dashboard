@@ -17,11 +17,20 @@ Modern SaaS dashboard for Customer Success teams — portfolio ARR, risk, renewa
 - Sort by ARR, health score, and renewal date
 - Clear filters, result count, and empty state
 
+## Phase 3
+
+- Portfolio analytics charts (Recharts)
+- Customer health distribution
+- ARR by health status
+- Upcoming renewals by month (next 6 months)
+- ARR by industry (highest to lowest)
+
 ## Stack
 
 - Next.js (App Router)
 - TypeScript
 - Tailwind CSS
+- Recharts
 
 ## Getting started
 
