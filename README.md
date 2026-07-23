@@ -32,12 +32,21 @@ Modern SaaS dashboard for Customer Success teams — portfolio ARR, risk, renewa
 - Customer overview + account insights
 - Helpful not-found state for invalid IDs
 
+## Phase 5
+
+- CSV import with drag-and-drop upload
+- Validation, preview, and browser-session portfolio replacement
+- Reset to mock data
+- Downloadable sample CSV template
+- Shared `CustomerProvider` for KPIs, charts, table, and detail pages
+
 ## Stack
 
 - Next.js (App Router)
 - TypeScript
 - Tailwind CSS
 - Recharts
+- Papa Parse
 
 ## Getting started
 
@@ -48,7 +57,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-Example detail page: [http://localhost:3000/customers/cus_01](http://localhost:3000/customers/cus_01).
+Sample CSV template: [http://localhost:3000/sample-customers.csv](http://localhost:3000/sample-customers.csv).
 
 ## Scripts
 
